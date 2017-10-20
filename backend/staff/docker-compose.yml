@@ -1,0 +1,11 @@
+mumt-staff-service:
+  build: .
+  ports:
+   - "5000:5440"
+  volumes:
+   - ./app:/app
+  links:
+   - mumt-mongodb
+
+mumt-mongodb:
+  image: mongo
